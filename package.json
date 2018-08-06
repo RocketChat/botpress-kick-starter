@@ -13,7 +13,7 @@
     "@botpress/hitl": "^10.25.2",
     "@botpress/nlu": "^10.25.2",
     "@botpress/skill-choice": "^10.25.2",
-    "botpress": "^10.25.2",
+    "botpress": "^10.28.0",
     "botpress-channel-rocketchat": "file:../botpress-channel-rocketchat",
     "jsdoc-api": "^4.0.3",
     "lodash": "^4.17.10",
