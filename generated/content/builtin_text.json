@@ -1,0 +1,20 @@
+[
+  {
+    "id": "builtin_text-TFstVJ",
+    "formData": {
+      "text": "This message is sent from DialogEngine",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-08-06T00:42:47.620Z"
+  },
+  {
+    "id": "builtin_text-~bXZrH",
+    "formData": {
+      "text": "This message is sent from DialogEngine and i will reply every user message with it.",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-08-06T00:44:01.186Z"
+  }
+]
