@@ -46,20 +46,26 @@ module.exports = async bp => {
   /// Conversation Management
   ////////////////////////////
 
-  bp.hear({platform:'rocketchat', type: 'message', text:'hello'}, async (event, next) => {
-    await bp.rocketchat.sendText(event.channel, 'Hi I\'m alive', {})
-    next()
-  })
+  // Examples of message triggrers
+  // bp.hear({platform:'rocketchat', type: 'message', text:'hello'}, async (event, next) => {
+  //   await bp.rocketchat.sendText(event.channel, 'Hi I\'m alive', {})
+  //   next()
+  // })
   // bp.hear({platform:'rocketchat', type: 'message', text:/.+/}, async (event, next) => {
   //   await bp.rocketchat.sendText(event.channel, 'I\'m a freaking awesome bot', {})
   //   next()
   // })
+
   // All events that should be processed by the Flow Manager
   bp.hear({type: /bp_dialog_timeout|text|message/i, text: /.+/}, async (event, next) => {
     console.log("ENGINE")
-    // TODO: Verify the importance of event.sessionID
-    //await bp.dialogEngine.processMessage(event.sessionId || event.channel, event).then()
+    console.log("USER:")
+    console.log(event.user)
+    console.log("CHANNEL:")
+    console.log(event.channel)
     await bp.dialogEngine.processMessage(event.user.id || event.channel, event).then()
+    
+    
     next()
   })
 }
