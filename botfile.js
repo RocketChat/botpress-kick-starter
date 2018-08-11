@@ -1,4 +1,4 @@
-const port = process.env.BOTPRESS_PORT || process.env.PORT || 3000
+const port = process.env.BOTPRESS_PORT || process.env.PORT || 3001
 const botUrl = process.env.BOTPRESS_URL || `http://localhost:${port}`
 
 module.exports = {

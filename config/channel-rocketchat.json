@@ -1,7 +1,7 @@
 {
     "username": "botpress",
     "password": "botpress",
-    "hostname": "http://localhost:3002",
+    "hostname": "http://localhost:3000",
     "useSSL": "false",
     "subscribeTo": "GENERAL",
     "scope": ""
