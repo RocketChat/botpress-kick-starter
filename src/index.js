@@ -63,9 +63,11 @@ module.exports = async bp => {
     console.log(event.user)
     console.log("CHANNEL:")
     console.log(event.channel)
-    await bp.dialogEngine.processMessage(event.user.id || event.channel, event).then()
+    console.log(event)
+    //await bp.dialogEngine.processMessage(event.user.id || event.channel, event).then()
     //await bp.dialogEngine.processMessage(event.user.id, event).then()
     //await bp.dialogEngine.processMessage(event.sessionId || event.channel, event).then() 
+    await bp.dialogEngine.processMessage(event.sessionId || event.user.id || event.channel, event).then() 
     next()
   })
 }
