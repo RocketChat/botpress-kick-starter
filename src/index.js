@@ -59,8 +59,8 @@ module.exports = async bp => {
   // All events that should be processed by the Flow Manager
   bp.hear({type: /bp_dialog_timeout|text|message/i, text: /.+/}, async (event, next) => {
     console.log("ENGINE")
-    console.log("USER:")
-    console.log(event.user)
+    //console.log("USER:")
+    //console.log(event.user)
     //console.log(event) 
     await bp.dialogEngine.processMessage(event.sessionId || event.user.id, event).then() 
     next()
