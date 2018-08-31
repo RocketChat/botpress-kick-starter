@@ -42,6 +42,14 @@ botpress start
 
 * To access the botpress instance go to `localhost:3001` (you can change this configuration at `botfile.js`)
 
+## Troubleshooting
+
+If the bot don't run, try to run:
+
+```sh
+npm audit fix
+```
+
 ## Deploy
 
 Check [Heroku](https://botpress.io/docs/deploy/heroku/) and [AWS](https://botpress.io/docs/deploy/aws/) deploy tutorials to get started

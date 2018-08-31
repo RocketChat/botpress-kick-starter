@@ -14,7 +14,7 @@
     "@botpress/nlu": "^10.25.2",
     "@botpress/skill-choice": "^10.25.2",
     "botpress": "^10.28.0",
-    "botpress-channel-rocketchat": "0.0.8",
+    "botpress-channel-rocketchat": "0.0.9",
     "jsdoc-api": "^4.0.3",
     "lodash": "^4.17.10",
     "yn": "^2.0.0"
