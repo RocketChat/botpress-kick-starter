@@ -2,31 +2,53 @@
 
 This is a example bot that is integrated with Rocket.Chat.
 
+We used the command `botpress init` and followed the steps in the `##instalation`
+topic to build this bot, so you can easily run `botpress start` to see the 
+**botpress bot** working in Rocket.Chat.
+
 ## Overview
 
-TODO
+![botpress-rocketchat](https://github.com/RocketChat/botpress-channel-rocketchat/wiki/images/botpress.gif)
 
-## Run bot
+## Installation
 
-* Install all dependêncies:
+* Install your bot dependencies:
 
-`npm install`
+```sh
+npm install
+```
 
-* Up a instance of Rocket.chat with docker:
+* Update the file `config/channel-rocketchat.json` and insert yourt bot data:
 
-`docker-compose up mongo`
-`docker-compose up rocketchat`
+```json
+{
+    "ROCKETCHAT_USER": "botpress",
+    "ROCKETCHAT_PASSWORD": "botpress",
+    "ROCKETCHAT_URL": "http://localhost:3000",
+    "ROCKETCHAT_USE_SSL": "false",
+    "ROCKETCHAT_ROOM": "GENERAL",
+    "scope": ""
+}
+```
 
-* Login and create the bot user at `http://localhost:3002`.
+* Start your bot.
 
-* Run the bot:
+```sh
+botpress start
+```
 
-`botpress start` 
-
-By default bot runs locally with web interface available at http://localhost:3000
-
-After that all your `dialogEngine` made in botpress flow will work, so send any
+* After that all your `dialogEngine` made in botpress flow will work, so send any
  message to the bot or the channels that you added it.
+
+* To access the botpress instance go to `localhost:3001` (you can change this configuration at `botfile.js`)
+
+## Troubleshooting
+
+If the bot don't run, try to run:
+
+```sh
+npm audit fix
+```
 
 ## Deploy
 
