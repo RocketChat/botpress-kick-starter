@@ -8,15 +8,14 @@ const {
 const registerCustom = require('./custom')
 
 module.exports = async bp => {
-  bp.middlewares.load()
   // This bot template includes a couple of built-in elements and actions
   // Please see the "@botpress/builtins" package to know more
   await registerBuiltin(bp)
 
-  // // Register custom actions, elements and renderers
+  // Register custom actions, elements and renderers
   await registerCustom(bp)
 
-  // // Train the NLU model if using the Native NLU Engine
+  // Train the NLU model if using the Native NLU Engine
   if (bp.nlu && bp.nlu.provider && bp.nlu.provider.name === 'native') {
     await bp.nlu.provider.sync()
   }
@@ -46,24 +45,9 @@ module.exports = async bp => {
   /// Conversation Management
   ////////////////////////////
 
-  // Examples of message triggrers
-  // bp.hear({platform:'rocketchat', type: 'message', text:'hello'}, async (event, next) => {
-  //   await bp.rocketchat.sendText(event.channel, 'Hi I\'m alive', {})
-  //   next()
-  // })
-  // bp.hear({platform:'rocketchat', type: 'message', text:/.+/}, async (event, next) => {
-  //   await bp.rocketchat.sendText(event.channel, 'I\'m a freaking awesome bot', {})
-  //   next()
-  // })
-
   // All events that should be processed by the Flow Manager
-  bp.hear({type: /bp_dialog_timeout|text|message/i, text: /.+/}, async (event, next) => {
-    console.log("ENGINE")
-    //console.log("USER:")
-    //console.log(event.user)
-    //console.log(event) 
-    await bp.dialogEngine.processMessage(event.sessionId || event.user.id, event).then() 
-    next()
+  bp.hear({ type: /bp_dialog_timeout|text|message|quick_reply/i }, (event, next) => {
+    bp.dialogEngine.processMessage(event.sessionId || event.user.id, event).then()
   })
 }
 

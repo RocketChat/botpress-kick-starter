@@ -6,6 +6,8 @@ We used the command `botpress init` and followed the steps in the `##instalation
 topic to build this bot, so you can easily run `botpress start` to see the 
 **botpress bot** working in Rocket.Chat.
 
+This bot is using version `10.34.0` of **botpress**.
+
 ## Overview
 
 ![botpress-rocketchat](https://github.com/RocketChat/botpress-channel-rocketchat/wiki/images/botpress.gif)
@@ -24,7 +26,7 @@ npm install
 {
     "ROCKETCHAT_USER": "botpress",
     "ROCKETCHAT_PASSWORD": "botpress",
-    "ROCKETCHAT_URL": "http://localhost:3000",
+    "ROCKETCHAT_URL": "http://localhost:3001",
     "ROCKETCHAT_USE_SSL": "false",
     "ROCKETCHAT_ROOM": "GENERAL",
     "scope": ""
@@ -40,15 +42,27 @@ botpress start
 * After that all your `dialogEngine` made in botpress flow will work, so send any
  message to the bot or the channels that you added it.
 
-* To access the botpress instance go to `localhost:3001` (you can change this configuration at `botfile.js`)
+* To access the botpress instance go to `localhost:3000` (you can change this configuration at `botfile.js`)
 
-## Troubleshooting
+## Livechat
 
-If the bot don't run, try to run:
+If you want to use your botpress bot in a LiveChat, follow this steps:
 
-```sh
-npm audit fix
-```
+* The Livechat allows a feature of a window that can be integrated to other pages. To activate it, you must access again the **Administration** option, by clicking on three points icon, on the left side menu. Then click on **Livechat** option.
+
+* On the next screen, mark the **Livechat enabled** option as True, and the **Show pre-registration form** option as False, in order to not be asked for email and password when using chat. Click then in **SAVE CHANGES**.
+
+* Close the left side menu, and click on three points icon. Select the **Livechat** option.
+
+* At the right side menu, select the **User Management** option. You must add the bot as an agent, so search for botnat, then click in **ADD**.
+
+* Now it is necessary to create an department. On the left side menu, click on **Departments**, and then click in **NEW DEPARTMENT**.
+
+* On the next screen, write a name and a description for the department and add the bot by selecting him on **Available agents**. Then click on **Save** option.
+
+* On the left side menu, click at **Installation**. Now you only need to copy and paste the code on your site, where you want to integrate the conversation window.
+
+* After integrating the code to your site, a window like the one showed in the image should be available, and ready to use.
 
 ## Deploy
 
