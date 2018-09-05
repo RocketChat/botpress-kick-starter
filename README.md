@@ -12,7 +12,50 @@ This bot is using version `10.34.0` of **botpress**.
 
 ![botpress-rocketchat](https://github.com/RocketChat/botpress-channel-rocketchat/wiki/images/botpress.gif)
 
-## Installation
+### Create you own bot
+
+* Install botpress:
+
+```sh
+npm install -g botpress@10.34.0
+```
+
+* Create your bot:
+
+```sh
+mkdir bot
+cd bot
+botpress init
+```
+
+* After add your bot data install the dependencies:
+
+```sh
+npm install
+
+npm install botpress-channel-rocketchat
+```
+
+* Create the file `config/channel-rocketchat.json` and insert your bot data:
+
+```json
+{
+    "ROCKETCHAT_USER": "botpress",
+    "ROCKETCHAT_PASSWORD": "botpress",
+    "ROCKETCHAT_URL": "http://localhost:3001",
+    "ROCKETCHAT_USE_SSL": "false",
+    "ROCKETCHAT_ROOM": "GENERAL",
+    "scope": ""
+}
+```
+
+* Run your bot:
+
+```sh
+botpress start
+```
+
+### Using this example bot 
 
 * Install your bot dependencies:
 
@@ -20,7 +63,7 @@ This bot is using version `10.34.0` of **botpress**.
 npm install
 ```
 
-* Update the file `config/channel-rocketchat.json` and insert yourt bot data:
+* Update the file `config/channel-rocketchat.json` and insert your bot data:
 
 ```json
 {
@@ -40,11 +83,11 @@ botpress start
 ```
 
 * After that all your `dialogEngine` made in botpress flow will work, so send any
- message to the bot or the channels that you added it.
+message to the bot or the channels that you added it.
 
 * To access the botpress instance go to `localhost:3000` (you can change this configuration at `botfile.js`)
 
-## Livechat
+### Livechat
 
 If you want to use your botpress bot in a LiveChat, follow this steps:
 
@@ -64,10 +107,10 @@ If you want to use your botpress bot in a LiveChat, follow this steps:
 
 * After integrating the code to your site, a window like the one showed in the image should be available, and ready to use.
 
-## Deploy
+### Deploy
 
 Check [Heroku](https://botpress.io/docs/deploy/heroku/) and [AWS](https://botpress.io/docs/deploy/aws/) deploy tutorials to get started
 
-## Development
+### Development
 
 To learn more on how to work with [Botpress](https://botpress.io/) you can read [here](https://botpress.io/docs/getting_started/).
