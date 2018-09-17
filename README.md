@@ -3,7 +3,7 @@
 This is a example bot that is integrated with Rocket.Chat.
 
 We used the command `botpress init` and followed the steps in the `##instalation`
-topic to build this bot, so you can easily run `botpress start` to see the 
+topic to build this bot, so you can easily run `npm start` to see the 
 **botpress bot** working in Rocket.Chat.
 
 This bot is using version `10.34.0` of **botpress**.
@@ -52,7 +52,7 @@ npm install botpress-channel-rocketchat
 * Run your bot:
 
 ```sh
-botpress start
+npm start
 ```
 
 ### Using this example bot 
@@ -79,7 +79,7 @@ npm install
 * Start your bot.
 
 ```sh
-botpress start
+npm start
 ```
 
 * After that all your `dialogEngine` made in botpress flow will work, so send any
