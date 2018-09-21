@@ -2,11 +2,11 @@
 
 This is a example bot that is integrated with Rocket.Chat.
 
-We used the command `botpress init` and followed the steps in the `##instalation`
-topic to build this bot, so you can easily run `npm start` to see the 
-**botpress bot** working in Rocket.Chat.
+We used the command `botpress init` and followed the steps in the `##instalation` topic to build this bot.
 
-This bot is using version `10.34.0` of **botpress**.
+Create your `config/channel-rocketchat.json` file to setup a connection to Rocket.Chat, or just run it with your own env variables so you can easily run `npm start` to see the **botpress bot** working in Rocket.Chat.
+
+This bot is using version `10.40.0` of **botpress**.
 
 ## Overview
 
@@ -17,7 +17,7 @@ This bot is using version `10.34.0` of **botpress**.
 * Install botpress:
 
 ```sh
-npm install -g botpress@10.34.0
+npm install -g botpress@10.40.0
 ```
 
 * Create your bot:
@@ -42,16 +42,27 @@ npm install botpress-channel-rocketchat
 {
     "ROCKETCHAT_USER": "botpress",
     "ROCKETCHAT_PASSWORD": "botpress",
-    "ROCKETCHAT_URL": "http://localhost:3001",
+    "ROCKETCHAT_URL": "http://localhost:3000",
     "ROCKETCHAT_USE_SSL": "false",
     "ROCKETCHAT_ROOM": "GENERAL",
     "scope": ""
 }
 ```
-
 * Run your bot:
 
 ```sh
+BOTPRESS_PORT=3002 npm start
+```
+
+* OR export your variables in the environment:
+
+```sh
+export BOTPRESS_PORT=3002
+export ROCKETCHAT_URL='http://localhost:3000' 
+export ROCKETCHAT_USER='botpress' 
+export ROCKETCHAT_PASSWORD='botpress' 
+export ROCKETCHAT_USE_SSL='false' 
+export ROCKETCHAT_ROOM='GENERAL' 
 npm start
 ```
 
@@ -69,7 +80,7 @@ npm install
 {
     "ROCKETCHAT_USER": "botpress",
     "ROCKETCHAT_PASSWORD": "botpress",
-    "ROCKETCHAT_URL": "http://localhost:3001",
+    "ROCKETCHAT_URL": "http://localhost:3000",
     "ROCKETCHAT_USE_SSL": "false",
     "ROCKETCHAT_ROOM": "GENERAL",
     "scope": ""
@@ -79,13 +90,18 @@ npm install
 * Start your bot.
 
 ```sh
-npm start
+BOTPRESS_PORT=3002 npm start
+```
+
+* OR just use:
+```sh
+BOTPRESS_PORT=3505 ROCKETCHAT_URL='http://localhost:3000' ROCKETCHAT_USER='botpress' ROCKETCHAT_PASSWORD='botpress' ROCKETCHAT_USE_SSL='false' ROCKETCHAT_ROOM='GENERAL' npm start
 ```
 
 * After that all your `dialogEngine` made in botpress flow will work, so send any
 message to the bot or the channels that you added it.
 
-* To access the botpress instance go to `localhost:3000` (you can change this configuration at `botfile.js`)
+* To access the botpress instance go to `localhost:3002` (you can change this configuration at `botfile.js`) or just setting a different `BOTPRESS_PORT` and `BOTPRESS_URL`.
 
 ### Livechat
 

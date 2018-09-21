@@ -1,20 +1,20 @@
 {
-  "name": "botpress-rocketchat",
-  "version": "1.0.0",
+  "name": "botpress-kick-starter",
+  "version": "0.1.1",
   "description": "A simple bot that is connected with Rocket.Chat",
   "main": "index.js",
   "engines": {
     "node": ">= 8 < 11"
   },
   "dependencies": {
-    "@botpress/audience": "10.34.0",
-    "@botpress/builtins": "10.34.0",
-    "@botpress/channel-web": "10.34.0",
-    "@botpress/hitl": "10.34.0",
-    "@botpress/nlu": "10.34.0",
-    "@botpress/skill-choice": "10.34.0",
-    "botpress": "10.34.0",
-    "botpress-channel-rocketchat": "0.0.10",
+    "@botpress/audience": "10.40.0",
+    "@botpress/builtins": "10.40.0",
+    "@botpress/channel-web": "10.40.0",
+    "@botpress/hitl": "10.40.0",
+    "@botpress/nlu": "10.40.0",
+    "@botpress/skill-choice": "10.40.0",
+    "botpress": "^10.40.0",
+    "botpress-channel-rocketchat": "file:../botpress-channel-rocketchat",
     "jsdoc-api": "^4.0.3",
     "lodash": "^4.17.10",
     "yn": "^2.0.0"
