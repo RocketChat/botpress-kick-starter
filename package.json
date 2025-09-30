@@ -16,7 +16,7 @@
     "botpress": "^10.40.0",
     "@rocket.chat/botpress-channel-rocketchat":"^0.0.14",
     "jsdoc-api": "^4.0.3",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.21",
     "yn": "^2.0.0"
   },
   "scripts": {
