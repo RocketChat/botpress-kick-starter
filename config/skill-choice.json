@@ -1,8 +1,15 @@
 {
+  "version": "12.0.0",
+  "nln": "1.0.0",
+  "intentsDir": "./generated/intents",
+  "entitiesDir": "./generated/entities",
+  "previewMode": "buttons",
   "defaultContentElement": "builtin_single-choice",
   "defaultContentRenderer": "#builtin_single-choice",
   "defaultMaxAttempts": "3",
   "disableIntegrityCheck": false,
-  "matchNumbers": true, // This allows people to type a number to match choices (like 1, 2, 3)
+  "matchCase": false,
+  "matchExact": false,
+  "matchNumbers": true, 
   "matchNLU": true
 }

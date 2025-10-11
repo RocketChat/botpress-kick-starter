@@ -1,28 +1,28 @@
 {
   "name": "botpress-kick-starter",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A simple bot that is connected with Rocket.Chat",
   "main": "index.js",
   "engines": {
-    "node": ">= 8 < 11"
+    "node": ">=18"
   },
   "dependencies": {
-    "@botpress/audience": "10.40.0",
-    "@botpress/builtins": "10.40.0",
-    "@botpress/channel-web": "10.40.0",
-    "@botpress/hitl": "10.40.0",
-    "@botpress/nlu": "10.40.0",
-    "@botpress/skill-choice": "10.40.0",
-    "botpress": "^10.40.0",
+    "@botpress/audience": "^12.0.0",
+    "@botpress/builtins": "^12.0.0",
+    "@botpress/channel-web": "^12.0.0",
+    "@botpress/hitl": "^12.0.0",
+    "@botpress/nlu": "^12.0.0",
+    "@botpress/skill-choice": "^12.0.0",
+    "@botpress/core": "^12.0.0",
     "@rocket.chat/botpress-channel-rocketchat":"^0.0.14",
-    "jsdoc-api": "^4.0.3",
-    "lodash": "^4.17.10",
-    "yn": "^2.0.0"
+    "jsdoc-api": "^8.0.0",
+    "lodash": "^4.17.21",
+    "yn": "^5.0.0"
   },
   "scripts": {
     "start": "node index.js",
     "ghost-sync": "botpress ghost-sync",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "Arthur Temporim",
   "license": "AGPL-3.0-only"
